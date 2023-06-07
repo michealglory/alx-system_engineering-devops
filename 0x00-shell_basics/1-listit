@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l $(dirname $(realpath $0))  
+ls -1 $(dirname $(realpath $0))  
