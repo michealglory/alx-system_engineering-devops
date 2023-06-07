@@ -1,5 +1,2 @@
 #!/bin/bash
-scriptPath=$(realpath $0)
-absolutePath=$(dirname $scriptPath)
-echo $absolutePath
-
+echo $(dirname $(realpath $0))
