@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -iname "*.gif" -execdir sh -c 'filename="${1##*/}"; echo "${filename%.*}"' sh {} \;
