@@ -1,2 +1,2 @@
 #!/bin/bash
-$(( (${WATER//water/} + ${STIR//stir/}) # bestchol ))
+printf "%d" "$(( $(printf "%d" "${WATER//water/}") + $(printf "%d" "${STIR//stir/}") ))" > /dev/stdout
