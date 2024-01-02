@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This Bash script generates an RSA SSH key pair with a 4096-bit key length.
+# The private key will be saved in a file named 'school' in the current
+# directory,
+# and the corresponding public key will be saved in 'school.pub'. 
+# The passphrase 'betty' is set to enhance security for the private key.
+ssh-keygen -t rsa -b 4096 -P betty -f school

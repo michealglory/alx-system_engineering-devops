@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This Bash script initiates an SSH connection to the remote server with the
+# IP address 100.25.19.204,
+# using the specified username 'ubuntu'. The connection is established using
+# the private key located
+# at '~/.ssh/school'. Ensure that the private key file exists and has the
+# correct permissions.
+ssh ubuntu@100.25.19.204 -i ~/.ssh/school
