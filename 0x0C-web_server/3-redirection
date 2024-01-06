@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#This script updates package information, installs the Nginx web server,
+#writes "Hello World!" to the default web page, replaces a specific
+#string in Nginx configuration, and restarts the Nginx service.
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/michaelglory.com permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
