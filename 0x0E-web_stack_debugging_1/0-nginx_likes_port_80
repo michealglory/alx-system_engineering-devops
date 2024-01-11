@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# debugging nginx port 80
+# Create a symbolic link for Nginx default site configuration
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart the Nginx service to apply the configuration changes
+sudo service nginx restart
