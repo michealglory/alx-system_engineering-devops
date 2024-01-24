@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Configure Nginx, change user and update port
+
+# Update the user in the nginx configuration file from www-data to nginx
+sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+# Replace port 80 with 8080 in the default Nginx site configuration
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+# Set the correct permissions for the nginx.conf file
+chmod 644 /etc/nginx/nginx.conf
+# Stop the Apache2 service using pkill
+pkill apache2
+# Start the Nginx service with the nginx user
+sudo -u nginx service nginx start

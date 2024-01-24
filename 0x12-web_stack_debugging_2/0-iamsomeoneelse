@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A Bash script that accepts one argument
+# Runs whoami with the user specified as the first command-line argument.
+
+sudo -u "$1" whoami
