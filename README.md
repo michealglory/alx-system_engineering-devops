@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-Shell Scripting
+tasks and projects on mysql setup
